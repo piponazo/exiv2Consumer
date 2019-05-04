@@ -6,5 +6,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 find_package(exiv2lib REQUIRED CONFIG NAMES exiv2)
 
+link_libraries(exiv2lib)
+
 add_executable(testApp test.cpp)
-target_link_libraries(testApp exiv2lib)
+add_executable(issue783 issue783.cpp)
